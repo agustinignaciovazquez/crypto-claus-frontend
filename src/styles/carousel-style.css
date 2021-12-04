@@ -1,0 +1,32 @@
+.slickSlide {
+    background: "#00cc00";
+    padding: 40px 0;
+    margin: 10px;
+    width: 300px !important;
+    height: auto !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.slider {
+    width: 1200px  !important;
+    overflow: hidden !important; 
+    display: inline-block  !important;
+    position: relative !important;
+}
+
+.carouselReverse{
+    padding-top: 380px;
+}
+
+@media screen and (min-width: 3840px) {
+   
+    .carouselReverse{
+        padding-top: 580px;
+    }
+    
+}
+

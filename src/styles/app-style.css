@@ -1,0 +1,146 @@
+.padding-top-countdown {
+    padding-top: 980px !important;    
+}
+
+.padding-top-title{
+    padding-top: 100px !important;
+}
+
+.paddingGif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 225px;
+}
+.iconStyle {
+    width: 90px !important;
+    height: 95px !important;
+    margin-top: -20px;
+    margin-bottom: -40px;
+}
+
+.bannerSection{
+    background-image: url(../assets/images/bannerTwitter.png);
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+.infoSection{
+    background-image: url(../assets/images/Backgroundlargo.png);
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+.gallerySection{
+    background-image: url(../assets/images/Backgroundlargo.png);
+    background-position: center top;
+    background-size: 100% auto;
+    padding-top: 300px;
+}
+
+
+.timerNumber {
+    
+    font-size: 120px !important;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.timerName {
+    
+    font-size: 30px !important;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.iconNavBar {
+    font-size: 25px;
+}
+
+.carouselstyle{
+    height: 800px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    
+    .timerNumber {
+    
+        font-size: 80px !important;
+        text-align: center;
+    }
+    
+    .timerName {
+        
+        font-size: 15px !important;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 2200px) {
+    .padding-top-countdown {
+        padding-top: 1200px !important;    
+    }
+
+    .carouselstyle{
+        height: 900px;
+    }
+
+}
+
+@media screen and (min-width: 2600px) {
+    .padding-top-countdown {
+        padding-top: 1400px !important;    
+    }
+
+}
+
+
+@media screen and (min-width: 3840px) {
+    .padding-top-countdown {
+        padding-top: 1900px !important;    
+    }
+
+    .padding-top-title{
+        padding-top: 200px !important;
+    }
+
+    .paddingGif {
+        padding-top: 150px !important;
+    }
+
+    .carouselstyle{
+        height: 1200px;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .bannerStyle {
+        width: 100vw !important;
+        height: auto !important;
+
+        margin-left: 0; 
+        margin-right: 0;
+    }
+    .paddingGif {
+        padding-top: 0px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .timerNumber {
+    
+        font-size: 60px !important;
+        text-align: center;
+    }
+    
+    .timerName {
+        
+        font-size: 15px !important;
+        text-align: center;
+    }
+}
+
+
+
