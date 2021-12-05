@@ -65,6 +65,12 @@ export const TextDescription2 = styled.p`
   line-height: 1.6;
 `;
 
+export const TextDescription3 = styled.p`
+  color: #000000;
+  font-size: 25px !important;
+  line-height: 1.2;
+  
+`;
 
 export const TextRoadMapTitle = styled.p`
   color: #fffeed;

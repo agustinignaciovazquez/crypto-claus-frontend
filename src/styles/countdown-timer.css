@@ -59,6 +59,147 @@ h1 {
 	height: 350%;
 }
 
+@media screen and (max-width: 1600px) {
+
+	.countdown-svg {
+		position: absolute;
+		width: 175%;
+		height: 175%;
+	}
+
+
+	.countdown-item span {
+		color: #fffeed;
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.countdown-item {
+		color: #fffeed;
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		line-height: 20px;
+		margin: 50px;
+		padding-top: 10px;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.countdown-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		height: 300px;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+	.countdown-svg {
+		position: absolute;
+		width: 175%;
+		height: 175%;
+	}
+
+
+	.countdown-item span {
+		color: #fffeed;
+		font-size: 10px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.countdown-item {
+		color: #fffeed;
+		font-size: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		line-height: 10px;
+		margin: 25px;
+		padding-top: 10px;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.countdown-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		height: 150px;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	.countdown-svg {
+		position: absolute;
+		width: 175%;
+		height: 175%;
+	}
+
+
+	.countdown-item span {
+		color: #fffeed;
+		font-size: 10px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.countdown-item {
+		color: #fffeed;
+		font-size: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		line-height: 10px;
+		margin: 10px;
+		padding-top: 10px;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.countdown-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		height: 150px;
+	}
+
+}
+
+@media screen and (max-width: 475px) {
+	.countdown-item {
+		color: #fffeed;
+		font-size: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		line-height: 10px;
+		margin: 0px;
+		padding-top: 10px;
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+}
+
+
 @media screen and (min-width: 3840px) {
 
 	.countdown-svg {

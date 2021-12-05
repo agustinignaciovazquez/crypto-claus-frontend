@@ -7,12 +7,7 @@ import styled from "styled-components";
 import gif from "./assets/images/CryptoClausGIF.gif";
 import icon from "./assets/images/icon.png"
 
-
-import faq1 from "./assets/images/faqs1.png";
-import faq2 from "./assets/images/faqs2.png";
-import faq3 from "./assets/images/faqs3.png";
-import faq4 from "./assets/images/faqs4.png";
-import faq5 from "./assets/images/faqs5.png";
+import Faq from './Faq';
 
 import { Container, Row, Col, Navbar, Nav, Carousel } from 'react-bootstrap';
 import "./styles/app-style.css";
@@ -25,30 +20,6 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineDot from '@mui/lab/TimelineDot';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import Countdown from 'react-countdown';
-
-import Faq from 'react-faq-component';
-
-
-const data = {
-  title: "FAQ (How it works)",
-  rows: [
-    {
-      title: "Lorem ipsum dolor sit amet,",
-      content: "Lorem ipsum dolor sit amet, consectetur "
-    },
-    {
-      title: "Nunc maximus, magna at ultricies elementum",
-      content: "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam."
-    },
-    {
-      title: "Curabitur laoreet, mauris vel blandit fringilla",
-      content: "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
-    },
-    {
-      title: "What is the package version",
-      content: "v1.0.5"
-    }]
-}
 
 export const StyledButton = styled.button`
   padding: 10px;
@@ -261,6 +232,7 @@ function App() {
               <Nav.Link href="#gallery">Gallery</Nav.Link>
               <Nav.Link href="#profit">Profit</Nav.Link>
               <Nav.Link href="#roadMap">Road Map</Nav.Link>
+              <Nav.Link href="#faq">FAQ</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link href="https://discord.gg/ezDKCcCy" className="iconNavBar">
@@ -285,8 +257,8 @@ function App() {
       <InformationSection id="about">
         <Container fluid>
           <Row>
-            <Col lg={2} xs={2} md={2} sm={2}></Col>
-            <Col lg={5} xs={5} md={5} sm={5}>
+            <Col lg={2} xs={1} md={1} sm={1}></Col>
+            <Col lg={5}>
               <s.TextTitle2 className="padding-top-title">
                 What is Crypto Claus?
               </s.TextTitle2>
@@ -301,22 +273,15 @@ function App() {
                 Crypto Claus will make donations to a number of childen´s ong agencies to help ensure the wellness of a lot of children in the world.
               </s.TextDescription2>
             </Col>
-            <Col  lg={5} xs={5} md={5} sm={5} className="paddingGif">
+            <Col className="paddingGif">
               <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/> 
             </Col>
-            <Col lg={2} xs={2} md={2} sm={2}></Col>
+            <Col lg={2} xs={1} md={1} sm={1}></Col>
           </Row>
           
         </Container>
       </InformationSection>
       <InformationSection id="gallery" className="gallerySection">
-        <Row >
-            <Col>
-            <s.TextTitle  style={{ textAlign: "center", paddingBottom: "100px" }}>
-              Some Magic Designs
-            </s.TextTitle>
-            </Col>
-        </Row>
         <InformationSection className="carouselstyle">
           <AutoPlay/>
           <AutoPlayReverse/>
@@ -327,7 +292,7 @@ function App() {
         <Container fluid>
           <Row>
             <Col lg={2} xs={2} md={2} sm={2}></Col>
-            <Col lg={5} xs={5} md={5} sm={5}>
+            <Col lg={5}>
               <s.TextTitle2 className="padding-top-title">
                 Why makes a Crypto Claus special?
               </s.TextTitle2>
@@ -339,7 +304,7 @@ function App() {
                 Each of the attributes that make up the Crypto Claus (background, body, eyes, mouth, hat, beard, moustache, ear, nose, head) have a certain probability of appearing. As you can imagine, the lower the probability, the more value that Crypto Claus will have and the more expensive it can be resold.
               </s.TextDescription2>
             </Col>
-            <Col  lg={5} xs={5} md={5} sm={5} className="paddingGif">
+            <Col className="paddingGif">
               <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/> 
             </Col>
             <Col lg={2} xs={2} md={2} sm={2}></Col>
@@ -484,56 +449,15 @@ function App() {
         </Container>          
       </InformationSection>
 
-      {/*<InformationSection style={{ height: screenSize.dynamicHeight }}>
-        <Container>
-          <Row>
-            <Col>
-              <Carousel>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={faq1}
-                    alt="First slide"
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={faq2}
-                    alt="Second slide"
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={faq3}
-                    alt="Third slide"
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={faq4}
-                    alt="Third slide"
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100"
-                    src={faq5}
-                    alt="Third slide"
-                  />
-                </Carousel.Item>
-              </Carousel>
-            </Col>
-          </Row>
-        </Container>
-  </InformationSection>*/}
+      <InformationSection id="faq">
+        <Faq/>
+      </InformationSection>
 
-    <InformationSection className="infoSection">
-      <Faq data={data}/>
-    </InformationSection>
-    </s.Screen>
+      <InformationSection className="infoSection" style={{height:500}}>
+        
+      </InformationSection>
+
+      </s.Screen>
   );
 }
 

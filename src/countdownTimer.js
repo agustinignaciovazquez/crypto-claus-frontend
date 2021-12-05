@@ -41,8 +41,8 @@ export default class CountdownTimer extends React.Component {
 		let start = 175;
 		let end = 175;
 		let radius = 150;
-		
-
+		let width = 10;	
+	
 		if(!seconds) {
 			return null;
 		}
@@ -51,6 +51,21 @@ export default class CountdownTimer extends React.Component {
 			start = 350;
 			end = 350;
 			radius = 300;
+		}else if(window.innerWidth <= 1600 && window.innerWidth >800 ){
+			start = 87.5;
+			end = 87.5;
+			radius = 75;
+			width = 7.5;
+		}else if(window.innerWidth <= 800 && window.innerWidth >600 ){
+			start = 87.5;
+			end = 87.5;
+			radius = 37.5;
+			width = 5;
+		}else if(window.innerWidth <= 600){
+			start = 87.5;
+			end = 87.5;
+			radius = 30;
+			width = 3;
 		}
 		
 		return (
@@ -58,28 +73,28 @@ export default class CountdownTimer extends React.Component {
 				<div className='countdown-wrapper'>
 					{days && (
 						<div className='countdown-item'>
-							<SVGCircle start={start} end={end} radius={radius} endAngle={daysEndAngle} />
+							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={daysEndAngle} />
 							{days} 
 							<span>days</span>
 						</div>
 					)}
 					{hours && (
 						<div className='countdown-item'>							
-							<SVGCircle start={start} end={end} radius={radius} endAngle={hoursEndAngle} />
+							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={hoursEndAngle} />
 							{hours} 
 							<span>hours</span>
 						</div>
 					)}
 					{minutes && (
 						<div className='countdown-item'>
-							<SVGCircle start={start} end={end} radius={radius} endAngle={minutesEndAngle} />
+							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={minutesEndAngle} />
 							{minutes} 
 							<span>minutes</span>
 						</div>
 					)}
 					{seconds && (
 						<div className='countdown-item'>
-							<SVGCircle start={start} end={end} radius={radius} endAngle={secondsEndAngle} />
+							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={secondsEndAngle} />
 							{seconds} 
 							<span>seconds</span>
 						</div>
@@ -90,9 +105,9 @@ export default class CountdownTimer extends React.Component {
 	}
 }
 
-const SVGCircle = ({start, end, radius, endAngle }) => (
+const SVGCircle = ({start, end, radius, endAngle, width }) => (
 		<svg className='countdown-svg'>
-			<path fill="none" stroke="#fffeed" strokeWidth="10" d={describeArc(start, end, radius, 0, endAngle)}/>
+			<path fill="none" stroke="#fffeed" strokeWidth={width} d={describeArc(start, end, radius, 0, endAngle)}/>
 		</svg>
 );
 
