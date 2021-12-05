@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/blockchain/blockchainActions";
 import { fetchData } from "./redux/data/dataActions";
@@ -11,7 +11,7 @@ import lineRoadMap from "./assets/images/lineasRoadMap1.png"
 
 import Faq from './Faq';
 
-import { Container, Row, Col, Navbar, Nav, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import "./styles/app-style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { SiGmail } from "react-icons/si";
@@ -81,10 +81,6 @@ function App() {
   const [feedback, setFeedback] = useState("");
   const [claimingNft, setClaimingNft] = useState(false);
 
-  const mainPage = <div>
-
-  </div>;
-
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
     dynamicHeight: window.innerHeight
@@ -99,7 +95,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener('resize', setDimension);
-    
+
     return(() => {
         window.removeEventListener('resize', setDimension);
     })
@@ -109,7 +105,7 @@ function App() {
     if (completed) {
       // Render a completed state
       return <div>
-        {Number(data.totalSupply) == 1000 ? (
+        {Number(data.totalSupply) === 1000 ? (
         <>
           <s.TextTitle style={{ textAlign: "center" }}>
             The sale has ended.
@@ -119,6 +115,7 @@ function App() {
             You can still find Nerdy Coder Clones on{" "}
             <a
               target={"_blank"}
+              rel="noreferrer"
               href={"https://opensea.io/collection/nerdy-coder-clones"}
             >
               Opensea.io
@@ -213,17 +210,19 @@ function App() {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account));
     }
-  };
+  }
 
   useEffect(() => {
-    getData();
-  }, [blockchain.account]);
+    if (blockchain.account !== "" && blockchain.smartContract !== null) {
+      dispatch(fetchData(blockchain.account));
+    }
+  }, [blockchain.account, blockchain.smartContract, dispatch]);
 
   return (
     <s.Screen>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#home"><img src={icon} className="iconStyle"/></Navbar.Brand>
+          <Navbar.Brand href="#home"><img src={icon} alt="Home" className="iconStyle"/></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -254,9 +253,9 @@ function App() {
         <div className="padding-top-countdown">
           <Countdown date={new Date(1639976583 * 1000)} renderer={renderer}/>
         </div>
-        
-      </InformationSection>     
-      
+
+      </InformationSection>
+
       <InformationSection id="about">
         <Container fluid>
           <Row>
@@ -266,29 +265,29 @@ function App() {
                 What is Crypto Claus?
               </s.TextTitle2>
               <s.TextDescription2 style={{ paddingTop: "50px"}}>
-                CryptoClaus is a collection of 4444 uniquely generated Santa Claus. 
-                Our foremost commitment is delivering value to our community members. 
+                CryptoClaus is a collection of 4444 uniquely generated Santa Claus.
+                Our foremost commitment is delivering value to our community members.
                 In doing so we have dedicated countless hours into ensuring the artwork and project scope  are top tier. <br/>
               </s.TextDescription2>
               <s.TextDescription2 style={{ paddingTop: "30px", paddingBottom: "100px", }}>
-                Delivering Value to Believers Crypto Claus holders will have access to exclusive airdrops, prizes, collaborative gifts, and other valuable benefits. 
-                In addition to delivering value to our community one of our core values is assisting in nonprofit efforts to poor children. 
+                Delivering Value to Believers Crypto Claus holders will have access to exclusive airdrops, prizes, collaborative gifts, and other valuable benefits.
+                In addition to delivering value to our community one of our core values is assisting in nonprofit efforts to poor children.
                 Crypto Claus will make donations to a number of childen´s ong agencies to help ensure the wellness of a lot of children in the world.
               </s.TextDescription2>
             </Col>
             <Col className="paddingGif">
-              <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/> 
+              <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/>
             </Col>
             <Col lg={2} xs={1} md={1} sm={1}></Col>
           </Row>
-          
+
         </Container>
       </InformationSection>
       <InformationSection id="gallery" className="gallerySection">
         <InformationSection className="carouselstyle">
           <AutoPlay/>
           <AutoPlayReverse/>
-        </InformationSection> 
+        </InformationSection>
       </InformationSection>
 
       <InformationSection id="profit">
@@ -303,19 +302,19 @@ function App() {
                 Each Crypto Claus is the result of combining a lot of hand-designed attributes, which means that each one is unique and the chances of two Crypto Clauses being the same is almost null. <br/>
               </s.TextDescription2>
               <s.TextDescription2 style={{ paddingTop: "30px", paddingBottom: "100px", }}>
-                Like all NFTs that are mined, a Crypto Claus is completely unique and unforgeable within the blockchain network. 
+                Like all NFTs that are mined, a Crypto Claus is completely unique and unforgeable within the blockchain network.
                 Each of the attributes that make up the Crypto Claus (background, body, eyes, mouth, hat, beard, moustache, ear, nose, head) have a certain probability of appearing. As you can imagine, the lower the probability, the more value that Crypto Claus will have and the more expensive it can be resold.
               </s.TextDescription2>
             </Col>
             <Col className="paddingGif">
-              <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/> 
+              <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/>
             </Col>
             <Col lg={2} xs={2} md={2} sm={2}></Col>
           </Row>
-          
+
         </Container>
-      </InformationSection>    
-   
+      </InformationSection>
+
       <InformationSection id="roadMap" className="infoSection">
         <Container style={{paddingBottom: "100px" }}>
           <Row style={{paddingTop: "300px", paddingBottom: "100px" }}>
@@ -326,7 +325,7 @@ function App() {
             </Col>
           </Row>
           <Row xl={2} md={1} >
-            <img src={lineRoadMap} className="roadMapLine"/>
+            <img src={lineRoadMap} alt={"Roadmap"} className="roadMapLine"/>
             <Col>
               <Row xl={8} md={8}>
                 <Col xl={1} md={1}>
@@ -450,7 +449,7 @@ function App() {
             </Col>
             <Col/>
           </Row>
-        </Container>          
+        </Container>
       </InformationSection>
 
       <InformationSection id="faq">
@@ -458,7 +457,7 @@ function App() {
       </InformationSection>
 
       <InformationSection className="footerSection" >
-        
+
         <Container>
           <Row>
             <Col className="textFooter">
@@ -470,7 +469,7 @@ function App() {
               <a href="mailto:cryptoclausnft.group@gmail.com" className="iconFooter">
                 <SiGmail/>
               </a>
-            
+
             </Col>
             <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
               <a href="https://discord.gg/ezDKCcCy" className="iconFooter">
