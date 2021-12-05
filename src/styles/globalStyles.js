@@ -74,9 +74,12 @@ export const TextDescription3 = styled.p`
 
 export const TextRoadMapTitle = styled.p`
   color: #fffeed;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1.6;
+  @media (max-width: 1275px) {
+    font-size: 30px !important;
+  }
 `;
 
 export const TextDescription = styled.p`
@@ -87,8 +90,11 @@ export const TextDescription = styled.p`
 
 export const TextRoadMapDescription = styled.p`
   color: #fffeed;
-  font-size: 18px !important;
+  font-size: 30px !important;
   line-height: 1.6;
+  @media (max-width: 1275px) {
+    font-size: 18px !important;
+  }
 `;
 
 export const StyledClickable = styled.div`

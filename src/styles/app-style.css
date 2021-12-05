@@ -87,6 +87,11 @@
     height: 800px;
 }
 
+.roadMapLine {
+    position: absolute;
+    width: 500px;
+    height: auto;
+}
 
 @media screen and (min-width: 2200px) {
     .padding-top-countdown {
@@ -104,6 +109,10 @@
     .footerSection {
         height:600px !important;
     }
+
+    .roadMapLine {
+        left: 37% !important;
+    }
 }
 
 @media screen and (min-width: 2600px) {
@@ -111,6 +120,9 @@
         padding-top: 1400px !important;    
     }
 
+    .roadMapLine {
+        left: 39% !important;
+    }
 }
 
 
@@ -131,6 +143,18 @@
     .carouselstyle{
         height: 1200px;
     }
+
+    .roadMapLine {
+        left: 43% !important;
+    }
+    
+}
+
+@media screen and (min-width: 1980px) {
+
+    .roadMapLine {
+        left: 35% !important;
+    }
     
 }
 
@@ -143,6 +167,10 @@
         padding-top: 0px !important;
         padding-bottom: 100px !important;
         padding-left: 100px;
+    }
+
+    .roadMapLine {
+        left: 33% !important;
     }
 }
 
@@ -167,7 +195,9 @@
         padding-top: 150px;
     }
 
-
+    .roadMapLine {
+        left: 33% !important;
+    }
 }
 
 @media screen and (max-width: 1275px) {
@@ -176,7 +206,19 @@
         padding-top: 580px !important;    
     }
 
+    .roadMapLine {
+        width: 300px;
+        left: 38% !important;
+    }
 
+}
+
+
+@media screen and (max-width: 1199px) {
+
+    .roadMapLine {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1025px) {
@@ -184,7 +226,6 @@
     .padding-top-countdown {
         padding-top: 480px !important;    
     }
-
 
 }
 
