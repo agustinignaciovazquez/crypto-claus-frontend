@@ -12,7 +12,8 @@ import Faq from './Faq';
 import { Container, Row, Col, Navbar, Nav, Carousel } from 'react-bootstrap';
 import "./styles/app-style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaDiscord, FaTwitter } from 'react-icons/fa';
+import { SiGmail } from "react-icons/si";
+import { FaDiscord, FaTwitter,  } from 'react-icons/fa';
 import AutoPlay from "./carousel.js";
 import AutoPlayReverse from "./carouselReverse.js";
 import CountdownTimer from "./countdownTimer.js";
@@ -453,8 +454,34 @@ function App() {
         <Faq/>
       </InformationSection>
 
-      <InformationSection className="infoSection" style={{height:500}}>
+      <InformationSection className="footerSection" >
         
+        <Container>
+          <Row>
+            <Col className="textFooter">
+              contact us
+            </Col>
+          </Row>
+          <Row>
+            <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
+              <a href="mailto:cryptoclausnft.group@gmail.com" className="iconFooter">
+                <SiGmail/>
+              </a>
+            
+            </Col>
+            <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
+              <a href="https://discord.gg/ezDKCcCy" className="iconFooter">
+                <FaDiscord/>
+              </a>
+            </Col>
+            <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
+              <a href="https://twitter.com/CryptoClaussNFT" className="iconFooter">
+                <FaTwitter/>
+              </a>
+            </Col>
+
+          </Row>
+        </Container>
       </InformationSection>
 
       </s.Screen>
