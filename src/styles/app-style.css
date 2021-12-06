@@ -220,6 +220,7 @@
     .paddingGif {
         padding-top: 100px !important;
         padding-bottom: 50px !important;
+        padding-left:35px;
     }
 
     .padding-top-countdown {
@@ -233,7 +234,7 @@
 
 }
 
-@media screen and (max-width: 1235px) {
+@media screen and (max-width: 990px) {
  .paddingGif {
         padding-top: 0px !important;
         padding-bottom: 50px !important;
@@ -303,6 +304,10 @@
         padding-top: 280px !important;    
     }
 
+    .paddingGif {
+        padding-left:25px;
+    }
+
 }
 
 
@@ -312,6 +317,11 @@
         padding-top: 200px !important;    
     }
 
+    .paddingGif {
+        padding-left:20px;
+    }
+
+
 }
 
 @media screen and (max-width: 408px) {
@@ -319,6 +329,11 @@
     .padding-top-countdown {
         padding-top: 180px !important;    
     }
+
+    .paddingGif {
+        padding-left:20px;
+    }
+
 
 }
 

@@ -293,8 +293,8 @@ function App() {
       <InformationSection id="profit">
         <Container fluid>
           <Row>
-            <Col lg={2} xs={0} md={0} sm={0}></Col>
-            <Col lg={5}>
+            <Col lg={1} xs={0} md={0} sm={0}></Col>
+            <Col lg={5} md={12}>
               <s.TextTitle2 className="padding-top-title">
                 Why makes a Crypto Claus special?
               </s.TextTitle2>
@@ -306,7 +306,7 @@ function App() {
                 Each of the attributes that make up the Crypto Claus (background, body, eyes, mouth, hat, beard, moustache, ear, nose, head) have a certain probability of appearing. As you can imagine, the lower the probability, the more value that Crypto Claus will have and the more expensive it can be resold.
               </s.TextDescription2>
             </Col>
-            <Col className="paddingGif">
+            <Col lg={5} md={12} className="paddingGif">
               <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/>
             </Col>
             <Col lg={2} xs={0} md={0} sm={0}></Col>
