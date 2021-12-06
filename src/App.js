@@ -7,7 +7,7 @@ import styled from "styled-components";
 import gif from "./assets/images/CryptoClausGIF.gif";
 import icon from "./assets/images/icon.png"
 
-import lineRoadMap from "./assets/images/lineasRoadMap1.png"
+import lineRoadMap from "./assets/images/lineasRoadMap8.png"
 
 import Faq from './Faq';
 
@@ -317,7 +317,7 @@ function App() {
 
       <InformationSection id="roadMap" className="infoSection">
         <Container style={{paddingBottom: "100px" }}>
-          <Row style={{paddingTop: "300px", paddingBottom: "100px" }}>
+          <Row className="roadmap-tittle-padding">
             <Col>
             <s.TextTitle style={{ textAlign: "center", }}>
               Road Map
@@ -328,14 +328,14 @@ function App() {
             <img src={lineRoadMap} alt={"Roadmap"} className="roadMapLine"/>
             <Col>
               <Row xl={8} md={8} sm={8} xs={8}>
-                <Col xl={1} md={1} sm={1} xs={1}>
+                <Col xl={1} md={2} sm={2} xs={2}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={8} md={8} sm={8} xs={8}>
+                <Col xl={7} md={10} sm={10} xs={10}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q1 - Pre-launch
                   </s.TextRoadMapTitle>
@@ -355,14 +355,14 @@ function App() {
             <Col>
               <Row xl={8} md={8} sm={8} xs={8}>
                 <Col xl={3} md={0}  sm={0} xs={0}/>
-                <Col xl={1} md={1} sm={1} xs={1}>
+                <Col xl={1} md={2} sm={2} xs={2}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={8} md={8} sm={8} xs={8}>
+                <Col xl={8} md={10} sm={10} xs={10}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q2 - Launch
                   </s.TextRoadMapTitle>
@@ -379,14 +379,14 @@ function App() {
           <Row xl={2} md={1} sm={1} xs={1} style={{paddingTop: "50px"}}>
             <Col>
               <Row xl={8} md={8} sm={8} xs={8}>
-                <Col xl={1} md={1} sm={1} xs={1}>
+                <Col xl={1} md={2} sm={2} xs={2}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={7} md={7} xs={7} sm={7} >
+                <Col xl={7} md={8} sm={8} xs={8} >
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q3 - Gratefulness
                   </s.TextRoadMapTitle>
@@ -405,14 +405,14 @@ function App() {
             <Col>
               <Row xl={8} md={8} sm={8} xs={8}>
                 <Col xl={3} md={0} sm={0} xs={0}/>
-                <Col xl={1} md={1} sm={1} xs={1}>
+                <Col xl={1} md={2} sm={2} xs={2}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={8} md={8} sm={8} xs={8}>
+                <Col xl={8} md={10} sm={10} xs={10}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q4 - New Santas pre-launch
                   </s.TextRoadMapTitle>
@@ -428,14 +428,14 @@ function App() {
           <Row xl={2} md={1} sm={1} xs={1} style={{paddingTop: "50px"}}>
             <Col>
               <Row xl={8} md={8} sm={8} xs={8}>
-                <Col xl={1} md={1} sm={1} xs={1}>
+                <Col xl={1} md={2} sm={2} xs={2}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={7} md={7} sm={7} xs={7}>
+                <Col xl={7} md={10} sm={10} xs={10}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q5 - New Santas launch
                   </s.TextRoadMapTitle>
