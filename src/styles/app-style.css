@@ -106,6 +106,10 @@
     padding-bottom: 100px;
 }
 
+.lineRoadMapContainer {
+    position: relative !important;
+}
+
 @media screen and (min-width: 2200px) {
     .padding-top-countdown {
         padding-top: 1200px !important;    
@@ -148,7 +152,7 @@
 
     .roadMapLine {
         width: 500px;
-        left: 42.5% !important;
+        left: 27% !important;
     }
 
     .textFooter {
@@ -165,7 +169,7 @@
 
     .roadMapLine {
         width: 500px;
-        left: 42.5% !important;
+        left: 27% !important;
     }
     
     .textFooter {
@@ -181,7 +185,7 @@
 
     .roadMapLine {
         width: 500px;
-        left: 40% !important;
+        left: 27% !important;
     }
 }
 
@@ -189,14 +193,14 @@
 
     .roadMapLine {
         width: 500px;
-        left: 38.5% !important;
+        left: 27% !important;
     }
 }
 
 @media screen and (max-width: 2200px) and (min-width: 1980px) {
 
     .roadMapLine {
-        left: 37% !important;
+        left: 27% !important;
     }
 }
 
@@ -205,7 +209,7 @@
 @media screen and (max-width: 1980px) and (min-width: 1720px) {
 
     .roadMapLine {
-        left: 35% !important;
+        left: 27% !important;
     }
     
 }
@@ -213,7 +217,7 @@
 @media screen and (max-width: 1720px) and (min-width: 1600px) {
 
     .roadMapLine {
-        left: 33% !important;
+        left: 27% !important;
     }
     
 }
@@ -221,7 +225,7 @@
 @media screen and (max-width: 1600px) and (min-width: 1450px) {
 
     .roadMapLine {
-        left: 33% !important;
+        left: 27% !important;
     }
 }
 
@@ -230,7 +234,7 @@
     .roadMapLine {
 
         width: 450px;
-        left: 34% !important;
+        left: 30% !important;
     }
 }
 
@@ -238,7 +242,7 @@
 
     .roadMapLine {
         width: 300px;
-        left: 38% !important;
+        left: 36% !important;
     }
 }
 

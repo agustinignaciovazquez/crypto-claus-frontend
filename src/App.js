@@ -324,7 +324,7 @@ function App() {
             </s.TextTitle>
             </Col>
           </Row>
-          <Row xl={2} md={1} sm={1} xs={1} >
+          <Row xl={2} md={1} sm={1} xs={1} className="lineRoadMapContainer">
             <img src={lineRoadMap} alt={"Roadmap"} className="roadMapLine"/>
             <Col>
               <Row xl={8} md={8} sm={8} xs={8}>
