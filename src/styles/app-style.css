@@ -40,6 +40,14 @@
     padding-top: 300px;
 }
 
+.padding-top-description{
+    padding-top: 50px;
+}
+
+.padding-top-description2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
 .timerNumber {
     
@@ -71,8 +79,7 @@
     color: #fffeed;
     font-size: 40px;
     text-align: center;
-    padding-bottom: 100px;
-    padding-top: 200px;
+    padding-top: 300px;
 }
 
 .footerSection {
@@ -80,7 +87,7 @@
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
-    height:500px;
+    height:450px;
 }
 
 .carouselstyle{
@@ -102,13 +109,6 @@
         height: 900px;
     }
 
-    .textFooter {
-        padding-top: 300px;
-    }
-
-    .footerSection {
-        height:600px !important;
-    }
 
     .roadMapLine {
         left: 37% !important;
@@ -163,6 +163,15 @@
         padding-top: 780px !important;    
     }
 
+    .padding-top-description{
+        padding-top: 25px;
+    }
+
+    .padding-top-description2{
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+
     .paddingGif {
         padding-top: 0px !important;
         padding-bottom: 100px !important;
@@ -189,10 +198,12 @@
     }
 
     .gallerySection{
-        background-image: url(../assets/images/Backgroundlargo.png);
-        background-position: center top;
         background-size: 100% auto;
         padding-top: 150px;
+        background-image: url(../assets/images/Backgroundlargo.png);
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .roadMapLine {
@@ -202,6 +213,15 @@
 
 @media screen and (max-width: 1275px) {
     
+   .padding-top-title{
+        padding-top: 50px !important;
+    }
+
+    .paddingGif {
+        padding-top: 100px !important;
+        padding-bottom: 50px !important;
+    }
+
     .padding-top-countdown {
         padding-top: 580px !important;    
     }
@@ -213,6 +233,12 @@
 
 }
 
+@media screen and (max-width: 1235px) {
+ .paddingGif {
+        padding-top: 0px !important;
+        padding-bottom: 50px !important;
+    }
+}
 
 @media screen and (max-width: 1199px) {
 
@@ -227,6 +253,8 @@
         padding-top: 480px !important;    
     }
 
+   
+
 }
 
 @media screen and (max-width: 910px) {
@@ -239,9 +267,6 @@
 }
 
 
-
-
-
 @media screen and (max-width: 794px) {
     .bannerStyle {
         width: 100vw !important;
@@ -252,7 +277,7 @@
     }
     .paddingGif {
         padding-top: 0px !important;
-        padding-bottom: 100px !important;
+        padding-bottom: 50px !important;
     }
 
     .timerNumber {
@@ -288,3 +313,30 @@
     }
 
 }
+
+@media screen and (max-width: 408px) {
+
+    .padding-top-countdown {
+        padding-top: 180px !important;    
+    }
+
+}
+
+
+@media screen and (max-width: 380px) {
+
+    .padding-top-countdown {
+        padding-top: 150px !important;    
+    }
+
+}
+
+
+@media screen and (max-width: 350px) {
+
+    .padding-top-countdown {
+        padding-top: 120px !important;    
+    }
+
+}
+

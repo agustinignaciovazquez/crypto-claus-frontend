@@ -49,6 +49,9 @@ export const TextTitle = styled.p`
   font-size: 60px !important;
   font-weight: 700;
   line-height: 1.6;
+  @media (max-width: 1275px) {
+    font-size: 30px !important;
+  }
 `;
 
 export const TextTitle2 = styled.p`
@@ -57,18 +60,27 @@ export const TextTitle2 = styled.p`
   font-size: 60px !important;
   font-weight: 700;
   line-height: 1.6;
+   @media (max-width: 1275px) {
+    font-size: 30px !important;
+  }
 `;
 
 export const TextDescription2 = styled.p`
   color: #000000;
   font-size: 30px !important;
   line-height: 1.6;
+   @media (max-width: 1275px) {
+    font-size: 15px !important;
+  }
 `;
 
 export const TextDescription3 = styled.p`
   color: #000000;
   font-size: 25px !important;
   line-height: 1.2;
+   @media (max-width: 1275px) {
+    font-size: 14px !important;
+  }
   
 `;
 
@@ -86,6 +98,9 @@ export const TextDescription = styled.p`
   color: #fffeed;
   font-size: 30px !important;
   line-height: 1.6;
+   @media (max-width: 1275px) {
+    font-size: 15px !important;
+  }
 `;
 
 export const TextRoadMapDescription = styled.p`

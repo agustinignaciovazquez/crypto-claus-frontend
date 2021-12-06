@@ -264,12 +264,12 @@ function App() {
               <s.TextTitle2 className="padding-top-title">
                 What is Crypto Claus?
               </s.TextTitle2>
-              <s.TextDescription2 style={{ paddingTop: "50px"}}>
+              <s.TextDescription2 className="padding-top-description">
                 CryptoClaus is a collection of 4444 uniquely generated Santa Claus.
                 Our foremost commitment is delivering value to our community members.
                 In doing so we have dedicated countless hours into ensuring the artwork and project scope  are top tier. <br/>
               </s.TextDescription2>
-              <s.TextDescription2 style={{ paddingTop: "30px", paddingBottom: "100px", }}>
+              <s.TextDescription2 className="padding-top-description2">
                 Delivering Value to Believers Crypto Claus holders will have access to exclusive airdrops, prizes, collaborative gifts, and other valuable benefits.
                 In addition to delivering value to our community one of our core values is assisting in nonprofit efforts to poor children.
                 Crypto Claus will make donations to a number of childen´s ong agencies to help ensure the wellness of a lot of children in the world.
@@ -293,15 +293,15 @@ function App() {
       <InformationSection id="profit">
         <Container fluid>
           <Row>
-            <Col lg={2} xs={2} md={2} sm={2}></Col>
+            <Col lg={2} xs={0} md={0} sm={0}></Col>
             <Col lg={5}>
               <s.TextTitle2 className="padding-top-title">
                 Why makes a Crypto Claus special?
               </s.TextTitle2>
-              <s.TextDescription2 style={{ paddingTop: "50px"}}>
+              <s.TextDescription2 className="padding-top-description">
                 Each Crypto Claus is the result of combining a lot of hand-designed attributes, which means that each one is unique and the chances of two Crypto Clauses being the same is almost null. <br/>
               </s.TextDescription2>
-              <s.TextDescription2 style={{ paddingTop: "30px", paddingBottom: "100px", }}>
+              <s.TextDescription2 className="padding-top-description2">
                 Like all NFTs that are mined, a Crypto Claus is completely unique and unforgeable within the blockchain network.
                 Each of the attributes that make up the Crypto Claus (background, body, eyes, mouth, hat, beard, moustache, ear, nose, head) have a certain probability of appearing. As you can imagine, the lower the probability, the more value that Crypto Claus will have and the more expensive it can be resold.
               </s.TextDescription2>
@@ -309,7 +309,7 @@ function App() {
             <Col className="paddingGif">
               <s.gif style={{backgroundImage: `url(${gif})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',}}/>
             </Col>
-            <Col lg={2} xs={2} md={2} sm={2}></Col>
+            <Col lg={2} xs={0} md={0} sm={0}></Col>
           </Row>
 
         </Container>
@@ -324,18 +324,18 @@ function App() {
             </s.TextTitle>
             </Col>
           </Row>
-          <Row xl={2} md={1} >
+          <Row xl={2} md={1} sm={1} xs={1} >
             <img src={lineRoadMap} alt={"Roadmap"} className="roadMapLine"/>
             <Col>
-              <Row xl={8} md={8}>
-                <Col xl={1} md={1}>
+              <Row xl={8} md={8} sm={8} xs={8}>
+                <Col xl={1} md={1} sm={1} xs={1}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={8} md={8}>
+                <Col xl={8} md={8} sm={8} xs={8}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q1 - Pre-launch
                   </s.TextRoadMapTitle>
@@ -350,19 +350,19 @@ function App() {
             <Col>
             </Col>
           </Row>
-          <Row xl={2} md={1} style={{paddingTop: "50px"}}>
+          <Row xl={2} md={1} sm={1} xs={1} style={{paddingTop: "50px"}}>
             <Col/>
             <Col>
-              <Row xl={8} md={8}>
-                <Col xl={3} md={0}/>
-                <Col xl={1} md={1}>
+              <Row xl={8} md={8} sm={8} xs={8}>
+                <Col xl={3} md={0}  sm={0} xs={0}/>
+                <Col xl={1} md={1} sm={1} xs={1}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={8} md={8}>
+                <Col xl={8} md={8} sm={8} xs={8}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q2 - Launch
                   </s.TextRoadMapTitle>
@@ -376,17 +376,17 @@ function App() {
               </Row>
             </Col>
           </Row>
-          <Row xl={2} md={1} style={{paddingTop: "50px"}}>
+          <Row xl={2} md={1} sm={1} xs={1} style={{paddingTop: "50px"}}>
             <Col>
-              <Row xl={8} md={8}>
-                <Col xl={1} md={1}>
+              <Row xl={8} md={8} sm={8} xs={8}>
+                <Col xl={1} md={1} sm={1} xs={1}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={7} md={7} xs={7}>
+                <Col xl={7} md={7} xs={7} sm={7} >
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q3 - Gratefulness
                   </s.TextRoadMapTitle>
@@ -400,19 +400,19 @@ function App() {
             </Col>
             <Col/>
           </Row>
-          <Row xl={2} md={1} style={{paddingTop: "50px"}}>
+          <Row xl={2} md={1} sm={1} xs={1} style={{paddingTop: "50px"}}>
             <Col/>
             <Col>
-              <Row xl={8} md={8}>
-                <Col xl={3} md={0}/>
-                <Col xl={1} md={1}>
+              <Row xl={8} md={8} sm={8} xs={8}>
+                <Col xl={3} md={0} sm={0} xs={0}/>
+                <Col xl={1} md={1} sm={1} xs={1}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={8} md={8}>
+                <Col xl={8} md={8} sm={8} xs={8}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q4 - New Santas pre-launch
                   </s.TextRoadMapTitle>
@@ -425,17 +425,17 @@ function App() {
               </Row>
             </Col>
           </Row>
-          <Row xl={2} md={1} style={{paddingTop: "50px"}}>
+          <Row xl={2} md={1} sm={1} xs={1} style={{paddingTop: "50px"}}>
             <Col>
-              <Row xl={8} md={8}>
-                <Col xl={1} md={1}>
+              <Row xl={8} md={8} sm={8} xs={8}>
+                <Col xl={1} md={1} sm={1} xs={1}>
                   <TimelineSeparator>
                     <TimelineDot style={{ backgroundColor: "#fffeed"}}>
                       <AcUnitIcon style={{color: "#c19e50"}}/>
                     </TimelineDot>
                   </TimelineSeparator>
                 </Col>
-                <Col xl={7} md={7}>
+                <Col xl={7} md={7} sm={7} xs={7}>
                   <s.TextRoadMapTitle style={{ textAlign: "left", }}>
                     Q5 - New Santas launch
                   </s.TextRoadMapTitle>
@@ -457,14 +457,7 @@ function App() {
       </InformationSection>
 
       <InformationSection className="footerSection" >
-
-        <Container>
-          <Row>
-            <Col className="textFooter">
-              contact us
-            </Col>
-          </Row>
-          <Row>
+          <Row className="textFooter">
             <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
               <a href="mailto:cryptoclausnft.group@gmail.com" className="iconFooter">
                 <SiGmail/>
@@ -483,7 +476,6 @@ function App() {
             </Col>
 
           </Row>
-        </Container>
       </InformationSection>
 
       </s.Screen>
