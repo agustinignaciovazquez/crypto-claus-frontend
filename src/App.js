@@ -6,6 +6,7 @@ import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import gif from "./assets/images/CryptoClausGIF.gif";
 import icon from "./assets/images/icon.png"
+import Mint from "./mint/Mint.tsx"
 
 import lineRoadMap from "./assets/images/lineasRoadMap8.png"
 
@@ -75,148 +76,16 @@ export const InformationSection = styled.div`
 `;
 
 function App() {
-  const dispatch = useDispatch();
-  const blockchain = useSelector((state) => state.blockchain);
-  const data = useSelector((state) => state.data);
-  const [feedback, setFeedback] = useState("");
-  const [claimingNft, setClaimingNft] = useState(false);
 
-  const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
-    dynamicHeight: window.innerHeight
-  });
-
-  const setDimension = () => {
-    getDimension({
-      dynamicWidth: window.innerWidth,
-      dynamicHeight: window.innerHeight
-    })
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', setDimension);
-
-    return(() => {
-        window.removeEventListener('resize', setDimension);
-    })
-  }, [screenSize])
-
-  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+  const renderer = ({ completed }) => {
     if (completed) {
       // Render a completed state
-      return <div>
-        {Number(data.totalSupply) === 1000 ? (
-        <>
-          <s.TextTitle style={{ textAlign: "center" }}>
-            The sale has ended.
-          </s.TextTitle>
-          <s.SpacerSmall />
-          <s.TextDescription style={{ textAlign: "center" }}>
-            You can still find Nerdy Coder Clones on{" "}
-            <a
-              target={"_blank"}
-              rel="noreferrer"
-              href={"https://opensea.io/collection/nerdy-coder-clones"}
-            >
-              Opensea.io
-            </a>
-          </s.TextDescription>
-        </>
-      ) : (
-        <>
-          <s.TextTitle style={{ textAlign: "center" }}>
-            1 NCC costs 100 MATIC.
-          </s.TextTitle>
-          <s.TextDescription style={{ textAlign: "center" }}>
-            {feedback}
-          </s.TextDescription>
-          {blockchain.account === "" ||
-          blockchain.smartContract === null ? (
-            <s.Container ai={"center"} jc={"center"}>
-              <s.TextDescription style={{ textAlign: "center" }}>
-                Connect to the Polygon network
-              </s.TextDescription>
-              <s.SpacerSmall />
-              <StyledButton
-                onClick={(e) => {
-                  e.preventDefault();
-                  dispatch(connect());
-                  getData();
-                }}
-              >
-                CONNECT
-              </StyledButton>
-              {blockchain.errorMsg !== "" ? (
-                <>
-                  <s.SpacerSmall />
-                  <s.TextDescription style={{ textAlign: "center" }}>
-                    {blockchain.errorMsg}
-                  </s.TextDescription>
-                </>
-              ) : null}
-            </s.Container>
-          ) : (
-            <s.Container ai={"center"} jc={"center"} fd={"row"}>
-              <StyledButton
-                disabled={claimingNft ? 1 : 0}
-                onClick={(e) => {
-                  e.preventDefault();
-                  claimNFTs(1);
-                  getData();
-                }}
-              >
-                {claimingNft ? "BUSY" : "MINT"}
-              </StyledButton>
-            </s.Container>
-          )}
-        </>
-      )}
-      </div>;
+      return <Mint></Mint>;
     } else {
       // Render a countdown
-      return <CountdownTimer timeTillDate="12 20 2021, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
+      return <CountdownTimer timeTillDate="12 22 2021, 8:00 pm" timeFormat="MM DD YYYY, h:mm a" />;
     }
   };
-
-  const claimNFTs = (_amount) => {
-    if (_amount <= 0) {
-      return;
-    }
-    setFeedback("Minting your Nerdy Coder Clone...");
-    setClaimingNft(true);
-    blockchain.smartContract.methods
-      .mint(blockchain.account, _amount)
-      .send({
-        gasLimit: "285000",
-        to: blockchain.account,
-        from: blockchain.account,
-        value: blockchain.web3.utils.toWei((1 * _amount).toString(), "ether"),
-      })
-      .once("error", (err) => {
-        console.log(err);
-        setFeedback("Sorry, something went wrong please try again later.");
-        setClaimingNft(false);
-      })
-      .then((receipt) => {
-        setFeedback(
-          "WOW, you now own a Nerdy Coder Clone. go visit Opensea.io to view it."
-        );
-        setClaimingNft(false);
-        dispatch(fetchData(blockchain.account));
-      });
-  };
-
-  const getData = () => {
-    if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData(blockchain.account));
-    }
-  }
-
-  useEffect(() => {
-    if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData(blockchain.account));
-    }
-  }, [blockchain.account, blockchain.smartContract, dispatch]);
 
   return (
     <s.Screen>
@@ -237,12 +106,12 @@ function App() {
               <Nav.Link href="#faq">FAQ</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="https://discord.gg/ezDKCcCy" className="iconNavBar">
+              <Nav.Link href="https://discord.gg/65TQKNUrZp" className="iconNavBar" target="_blank">
                 <FaDiscord/>
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="https://twitter.com/CryptoClaussNFT" className="iconNavBar">
+              <Nav.Link href="https://twitter.com/CryptoClaussNFT" className="iconNavBar" target="_blank">
                 <FaTwitter/>
               </Nav.Link>
             </Nav>
@@ -251,7 +120,7 @@ function App() {
       </Navbar>
       <InformationSection id="home" className="bannerSection">
         <div className="padding-top-countdown">
-          <Countdown date={new Date(1639976583 * 1000)} renderer={renderer}/>
+          <Countdown date={new Date(1640214000 * 1000)} renderer={renderer}/>
         </div>
 
       </InformationSection>
@@ -369,7 +238,7 @@ function App() {
                   <s.TextRoadMapDescription style={{ textAlign: "left", paddingTop: "30px", color: "#fffeed", }}>
                     Whitelisting event<br/>
                     Mint 4444 Crypto Claus<br/>
-                    Launch the collection on opensea gallery <br/>
+                    Launch the collection on secondary gallery <br/>
                     Donation to NGOs <br/>
                   </s.TextRoadMapDescription>
                 </Col>
@@ -441,7 +310,7 @@ function App() {
                   </s.TextRoadMapTitle>
                   <s.TextRoadMapDescription style={{ textAlign: "left", paddingTop: "30px", color: "#fffeed", }}>
                     Mint 4444 Crypto Claus v2 <br/>
-                    Launch the new collection on opensea gallery <br/>
+                    Launch the new collection on secondary gallery <br/>
                     Donation to NGOs <br/>
                   </s.TextRoadMapDescription>
                 </Col>
@@ -465,12 +334,12 @@ function App() {
 
             </Col>
             <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
-              <a href="https://discord.gg/ezDKCcCy" className="iconFooter">
+              <a href="https://discord.gg/65TQKNUrZp" className="iconFooter" target="_blank">
                 <FaDiscord/>
               </a>
             </Col>
             <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
-              <a href="https://twitter.com/CryptoClaussNFT" className="iconFooter">
+              <a href="https://twitter.com/CryptoClaussNFT" className="iconFooter" target="_blank">
                 <FaTwitter/>
               </a>
             </Col>
