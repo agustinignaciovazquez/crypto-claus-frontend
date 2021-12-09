@@ -49,6 +49,9 @@ export const TextTitle = styled.p`
   font-size: 60px !important;
   font-weight: 700;
   line-height: 1.6;
+  @media (max-width: 1275px) {
+    font-size: 30px !important;
+  }
 `;
 
 export const TextTitle2 = styled.p`
@@ -57,18 +60,27 @@ export const TextTitle2 = styled.p`
   font-size: 60px !important;
   font-weight: 700;
   line-height: 1.6;
+   @media (max-width: 1275px) {
+    font-size: 30px !important;
+  }
 `;
 
 export const TextDescription2 = styled.p`
   color: #000000;
   font-size: 30px !important;
   line-height: 1.6;
+   @media (max-width: 1275px) {
+    font-size: 15px !important;
+  }
 `;
 
 export const TextDescription3 = styled.p`
   color: #000000;
   font-size: 25px !important;
   line-height: 1.2;
+   @media (max-width: 1275px) {
+    font-size: 14px !important;
+  }
   
 `;
 
@@ -86,6 +98,9 @@ export const TextDescription = styled.p`
   color: #fffeed;
   font-size: 30px !important;
   line-height: 1.6;
+   @media (max-width: 1275px) {
+    font-size: 15px !important;
+  }
 `;
 
 export const TextRoadMapDescription = styled.p`
@@ -121,15 +136,29 @@ export const slickSlide = styled.div`
 
 export const gif = styled.div`
     background: "#00cc00";
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 100px;
     width: 400px;
     height: 400px;   
     @media (min-width: 3840px) {
       width: 600px !important;
       height: 600px !important;
+    }  
+    @media (max-width: 540px) {
+      width: 300px !important;
+      height: 300px !important;
+      margin-bottom: 0px;
     }
+     @media (max-width: 458px) {
+      width: 250px !important;
+      height: 250px !important;
+      margin-bottom: 0px;
+    }
+     @media (max-width: 1275px) {
+      width: 350px !important;
+      height: 350px !important;
+      margin-bottom: 0px;
+    }
+
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);

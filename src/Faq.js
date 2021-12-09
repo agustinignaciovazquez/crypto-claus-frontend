@@ -23,7 +23,7 @@ export default class Faq extends React.Component{
 
                 {
                     title: "What network will this be launched on?",
-                    content: "Ethereum."
+                    content: "Solana."
                 }, 
             
                 
@@ -44,7 +44,7 @@ export default class Faq extends React.Component{
 
                 {
                     title: "Which wallet do I need?",
-                    content: "Any wallet that supports Ethereum blockchain is good. Metamask is the one we recommend the most."
+                    content: "Any wallet that supports Solana blockchain is good. Phantom is the one we recommend the most."
                 },  
            ],
            questionState:[],
