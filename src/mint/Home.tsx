@@ -11,7 +11,7 @@ import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
 
-import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 
 
 import {
@@ -108,7 +108,8 @@ const Home = (props: HomeProps) => {
           wallet.publicKey,
           props.treasury
         );
-
+        console.debug(balance);
+        console.debug(itemsRemaining);
         const status = await awaitTransactionSignatureConfirmation(
           mintTxId,
           props.txTimeout,
@@ -182,7 +183,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
-      
+
 
       <MintContainer>
         {!wallet ? (
@@ -191,7 +192,7 @@ const Home = (props: HomeProps) => {
             <ConnectButton>Connect Wallet</ConnectButton>
           </Col>
         </Row>
-        ) : ( 
+        ) : (
         <>
           <Row>
             <Col>
@@ -219,7 +220,7 @@ const Home = (props: HomeProps) => {
                         "MINT"
                       )
                     ) : (
-                      <Countdown 
+                      <Countdown
                         date={startDate}
                         onMount={({ completed }) => completed && setIsActive(true)}
                         onComplete={() => setIsActive(true)}

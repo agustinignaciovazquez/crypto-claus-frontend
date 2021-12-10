@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { connect } from "./redux/blockchain/blockchainActions";
-import { fetchData } from "./redux/data/dataActions";
+import React from "react";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import gif from "./assets/images/CryptoClausGIF.gif";
@@ -334,12 +331,12 @@ function App() {
 
             </Col>
             <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
-              <a href="https://discord.gg/65TQKNUrZp" className="iconFooter" target="_blank">
+              <a href="https://discord.gg/65TQKNUrZp" className="iconFooter" target="_blank" rel="noreferrer" >
                 <FaDiscord/>
               </a>
             </Col>
             <Col lg={4} xs={4} md={4} sm={4} style={{textAlign: "center"}}>
-              <a href="https://twitter.com/CryptoClaussNFT" className="iconFooter" target="_blank">
+              <a href="https://twitter.com/CryptoClaussNFT" className="iconFooter" target="_blank" rel="noreferrer">
                 <FaTwitter/>
               </a>
             </Col>
