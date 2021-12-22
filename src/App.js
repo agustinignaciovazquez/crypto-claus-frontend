@@ -80,7 +80,7 @@ function App() {
       return <Mint></Mint>;
     } else {
       // Render a countdown
-      return <CountdownTimer timeTillDate="12 23 2021, 10:00 pm" timeFormat="MM DD YYYY, h:mm a" />;
+      return <CountdownTimer timeTillDate="12 23 2021, 8:00 pm" timeFormat="MM DD YYYY, h:mm a" />;
     }
   };
 
