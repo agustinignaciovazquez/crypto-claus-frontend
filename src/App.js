@@ -117,7 +117,7 @@ function App() {
       </Navbar>
       <InformationSection id="home" className="bannerSection">
         <div className="padding-top-countdown">
-          <Countdown date={new Date(1640311200 * 1000)} renderer={renderer}/>
+          <Countdown date={new Date(1600311200 * 1000)} renderer={renderer}/>
         </div>
 
       </InformationSection>

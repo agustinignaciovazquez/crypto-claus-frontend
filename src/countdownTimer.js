@@ -12,7 +12,7 @@ export default class CountdownTimer extends React.Component {
 
 	componentDidMount() {
 		this.interval = setInterval(() => {
-			const timeTillDate = new Date(1640311200 * 1000);
+			const timeTillDate = new Date(1600311200 * 1000);
 			const then = moment(timeTillDate);
 			const now = moment();
 			const countdown = moment(then - now);
