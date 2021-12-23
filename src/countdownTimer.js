@@ -9,11 +9,11 @@ export default class CountdownTimer extends React.Component {
 		minutes: undefined,
 		seconds: undefined
 	}
-	
+
 	componentDidMount() {
 		this.interval = setInterval(() => {
-			const { timeTillDate, timeFormat } = this.props;
-			const then = moment(timeTillDate, timeFormat);
+			const timeTillDate = new Date(1640311200 * 1000);
+			const then = moment(timeTillDate);
 			const now = moment();
 			const countdown = moment(then - now);
 			const days = countdown.format('D');
@@ -30,23 +30,23 @@ export default class CountdownTimer extends React.Component {
 			clearInterval(this.interval);
 		}
 	}
-	
+
 	render() {
 		const { days, hours, minutes, seconds } = this.state;
 		const daysEndAngle = mapNumber(days, 30, 0, 0, 360);
 		const hoursEndAngle = mapNumber(hours, 24, 0, 0, 360);
 		const minutesEndAngle = mapNumber(minutes, 60, 0, 0, 360);
 		const secondsEndAngle = mapNumber(seconds, 60, 0, 0, 360);
-		
+
 		let start = 175;
 		let end = 175;
 		let radius = 150;
-		let width = 10;	
-	
+		let width = 10;
+
 		if(!seconds) {
 			return null;
 		}
-		
+
 		if(window.innerWidth >= 3840){
 			start = 350;
 			end = 350;
@@ -67,35 +67,35 @@ export default class CountdownTimer extends React.Component {
 			radius = 30;
 			width = 3;
 		}
-		
+
 		return (
 			<div>
 				<div className='countdown-wrapper'>
-					{days && (
+					{days && false && (
 						<div className='countdown-item'>
 							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={daysEndAngle} />
-							{days} 
+							{days}
 							<span>days</span>
 						</div>
 					)}
 					{hours && (
-						<div className='countdown-item'>							
+						<div className='countdown-item'>
 							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={hoursEndAngle} />
-							{hours} 
+							{hours}
 							<span>hours</span>
 						</div>
 					)}
 					{minutes && (
 						<div className='countdown-item'>
 							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={minutesEndAngle} />
-							{minutes} 
+							{minutes}
 							<span>minutes</span>
 						</div>
 					)}
 					{seconds && (
 						<div className='countdown-item'>
 							<SVGCircle start={start} width={width} end={end} radius={radius} endAngle={secondsEndAngle} />
-							{seconds} 
+							{seconds}
 							<span>seconds</span>
 						</div>
 					)}
@@ -129,11 +129,11 @@ function describeArc(x, y, radius, startAngle, endAngle){
     var largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
 
     var d = [
-        "M", start.x, start.y, 
+        "M", start.x, start.y,
         "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y
     ].join(" ");
 
-    return d;       
+    return d;
 }
 
 // Stackoverflow: https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers

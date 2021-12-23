@@ -19,13 +19,12 @@ import {
   awaitTransactionSignatureConfirmation,
   getCandyMachineState,
   mintOneToken,
-  shortenAddress,
 } from "./candy-machine";
 
 const ConnectButton = styled(WalletDialogButton)`
-  float: right;
   margin-right: 20px !important;
-  color: #f5f7fa
+  font-size:50px;
+  color: #f5f7fa;
 `;
 
 const CounterText = styled.span``; // add your styles here
@@ -34,6 +33,7 @@ const MintContainer = styled.div``; // add your styles here
 
 const MintButton = styled(Button)`
   color: #f5f7fa !important;
+  font-size:50px;
   background-color: #6ac9e1 !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -188,24 +188,14 @@ const Home = (props: HomeProps) => {
       <MintContainer>
         {!wallet ? (
           <Row>
-          <Col style={{height: "150px"}}>
+          <Col className={'connectButton1'}>
             <ConnectButton>Connect Wallet</ConnectButton>
           </Col>
         </Row>
         ) : (
         <>
           <Row>
-            <Col>
-            {(
-              <p style={{float: "left", margin: "revert", paddingLeft: "20px", color: "#f5f7fa"}}>Wallet connected: {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-            )}
-            </Col>
-            <Col>
-              <ConnectButton disabled>Connected</ConnectButton>
-            </Col>
-          </Row>
-          <Row>
-            <Col >
+            <Col className={'mintButton1'}>
                 <MintButton
                   disabled={isSoldOut || isMinting || !isActive}
                   onClick={onMint}

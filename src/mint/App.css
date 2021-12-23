@@ -1,3 +1,16 @@
 .App {
   text-align: center;
 }
+.connectButton1{
+  padding-top: 50px;
+  width: 50% !important;
+  margin: auto;
+  text-align: center;
+  height: 120px;
+}
+.connectButton1 span{
+  font-size:20px;
+}
+.mintButton1 span{
+  font-size:20px;
+}
