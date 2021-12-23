@@ -80,7 +80,7 @@ function App() {
       return <Mint></Mint>;
     } else {
       // Render a countdown
-      return <CountdownTimer timeTillDate="12 23 2021, 8:00 pm" timeFormat="MM DD YYYY, h:mm a" />;
+      return <CountdownTimer timeTillDate="12 23 2021, 23:00 pm" timeFormat="MM DD YYYY, h:mm a" />;
     }
   };
 
@@ -117,7 +117,7 @@ function App() {
       </Navbar>
       <InformationSection id="home" className="bannerSection">
         <div className="padding-top-countdown">
-          <Countdown date={new Date(1640214000 * 1000)} renderer={renderer}/>
+          <Countdown date={new Date(1640311200 * 1000)} renderer={renderer}/>
         </div>
 
       </InformationSection>
