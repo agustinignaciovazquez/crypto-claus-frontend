@@ -218,7 +218,7 @@ const Home = (props: HomeProps) => {
                       />
                     )}
                 </MintButton>
-                {wallet && <p style={{textAlign: "center", marginBottom: "20px", color: "#f5f7fa"}}>{itemsRedeemed}/{itemsAvailable}</p>}
+                {wallet  && false && <p style={{textAlign: "center", marginBottom: "20px", color: "#f5f7fa"}}>{itemsRedeemed}/{itemsAvailable}</p>}
               </Col>
             </Row>
           </>
